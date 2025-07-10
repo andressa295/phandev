@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa'; // Importe os ícones
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'; // Importe os ícones
 import './footer.css';
 
 export default function Footer() {
