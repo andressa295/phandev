@@ -1,0 +1,75 @@
+/* src/styles/footer.css */
+
+.main-footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--dark-background-alt); /* Fundo sutil */
+  color: var(--text-light);
+  font-size: 0.9rem; /* Fonte ligeiramente menor para o copyright */
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.03); /* Sombra sutil para separação */
+}
+
+.main-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem; /* Espaçamento entre os blocos */
+}
+
+.main-footer .logo-pequena {
+  width: 70px; /* Tamanho ajustado do logo */
+  height: auto;
+  filter: grayscale(80%) brightness(0.8); /* Mais discreto */
+  opacity: 0.7;
+  transition: all var(--transition-speed) var(--transition-ease);
+}
+
+.main-footer .logo-pequena:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+.main-footer .copyright {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-medium);
+}
+
+.main-footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Espaçamento entre os ícones */
+  margin-top: 0.8rem;
+}
+
+.main-footer .social-links a {
+  color: var(--text-medium); /* Cor neutra para ícones */
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  transition: all var(--transition-speed) var(--transition-ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-footer .social-links a:hover {
+  color: var(--primary-color); /* Destaque no hover */
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 1.5rem 1rem;
+  }
+  .main-footer .logo-pequena {
+    width: 60px;
+  }
+  .main-footer .social-links {
+    gap: 1.2rem;
+  }
+  .main-footer .social-links a {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,492 @@
+/* ========= RESET ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  background-color: #fff;
+  color: #1c1c1c;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========= CONTAINER ========= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ========= HEADER ========= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu a {
+  margin-left: 1rem;
+  color: #f28ca3;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #d95e88;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #faf5f7;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-icons svg {
+  font-size: 1.4rem;
+  color: #d85a8a;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons svg:hover {
+  transform: scale(1.1);
+}
+
+/* ========= HERO ========= */
+.hero {
+  text-align: center;
+  background: #fff0f5;
+  padding: 5rem 2rem; /* Espaçamento reduzido */
+  border-radius: 16px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #d85a8a;
+  margin-bottom: 1rem;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #d85a8a;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #f28cb2;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #e3729b;
+}
+
+/* ========= SEÇÕES ========= */
+section {
+  padding: 4rem 2rem; /* Espaçamento reduzido aqui também */
+  position: relative;
+}
+
+section:not(:last-child) {
+  margin-bottom: 2rem; /* Espaçamento entre seções reduzido */
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #d85a8a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #f28cb2;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+/* ========= SOBRE - NOVOS ESTILOS ========= */
+.sobre-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.sobre-content p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .sobre-content {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .sobre-content div {
+        max-width: 600px;
+    }
+}
+
+
+/* ========= CARDS DE SERVIÇOS ========= */
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.servico-card {
+  padding: 1.5rem;
+  background: #fff8fa;
+  border: 1px solid #f3dce3;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  display: flex; /* Para alinhar o ícone e o texto */
+  flex-direction: column; /* Coloca ícone em cima do texto */
+  align-items: center; /* Centraliza horizontalmente */
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo para os ícones da seção de serviços (agora React Icons) */
+.servico-icon-servicos {
+  font-size: 2.5rem; /* Tamanho dos ícones de serviço */
+  color: #f28cb2; /* Cor dos ícones de serviço */
+  margin-bottom: 1rem;
+}
+
+/* ========= PORTFÓLIO ========= */
+.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.portfolio .grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.portfolio .grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ========= COMO EU TRABALHO - NOVOS ESTILOS COM CARDS (LAYOUT 2X2 GARANTIDO) ========= */
+.processo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.processo-card {
+  background: #fff8fa;
+  border: 1px solid #f3dce3;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.processo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Estilo para os ícones da seção "Como eu trabalho" (FaLightbulb, etc.) */
+.processo-icon {
+  font-size: 3rem;
+  color: #d85a8a;
+  margin-bottom: 1rem;
+  /* Garantindo que a fonte do Font Awesome seja aplicada */
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands', 'Font Awesome 5 Pro', 'Segoe UI', Arial, sans-serif !important;
+  font-weight: 900 !important; /* Essencial para ícones solid ou brand */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.processo-card h3 {
+  font-size: 1.3rem;
+  color: #d44f80;
+  margin-bottom: 0.75rem;
+}
+
+.processo-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* ========= FAQ - ESTILOS MELHORADOS ========= */
+.faq {
+  background: #fff0f5;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(248, 190, 210, 0.1);
+  max-width: 900px;
+  margin: 2rem auto; /* Espaçamento reduzido */
+  text-align: left;
+}
+
+.faq h2 {
+    text-align: center;
+}
+
+.faq-items-wrapper {
+    margin-top: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #f3dce3;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #444;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  list-style: none;
+  transition: background-color 0.2s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #d44f80;
+  transition: transform 0.2s ease;
+  margin-left: 1rem;
+}
+
+.faq-item[open] summary::after {
+  content: '-';
+  transform: rotate(0deg);
+}
+
+.faq-item[open] summary {
+    background-color: #fef0f5;
+}
+
+.faq-item p {
+  padding: 0 1.5rem 1rem;
+  margin-top: 0.5rem;
+  color: #666;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ========= CONTATO (CALL TO ACTION FINAL) ========= */
+.contato {
+  text-align: center;
+  padding: 4rem 2rem; /* Espaçamento reduzido */
+  background: linear-gradient(to right, #f9dfe9, #ffe4ee);
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: 3rem auto; /* Espaçamento reduzido */
+}
+
+.contato h2 {
+  font-size: 1.6rem;
+  color: #d44f80;
+  margin-bottom: 1rem;
+}
+
+.contato p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.contato .container > .btn.whatsapp {
+  margin-top: 0;
+  padding: 0.9rem 2rem;
+  background-color: #f28cb2;
+  color: #fff;
+  border-radius: 999px;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+.contato .container > .btn.whatsapp:hover {
+  background-color: #d14a7e;
+}
+
+
+/* ========= RESPONSIVO ========= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .menu a {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    white-space: normal;
+    overflow: visible;
+    border-right: none;
+    animation: none;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 3rem 1rem; /* Mais reduzido para mobile */
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid-servicos,
+  .portfolio .grid,
+  .processo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .faq {
+    padding: 2rem 1rem;
+  }
+
+  .faq-item summary,
+  .faq-item p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contato {
+    padding: 3rem 1.5rem;
+    margin: 2rem auto; /* Mais reduzido para mobile */
+  }
+  .contato h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ========= ANIMAÇÕES ========= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
